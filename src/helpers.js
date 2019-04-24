@@ -33,7 +33,7 @@ export function restrictPosition(position, imageSize, cropSize, zoom) {
 }
 
 function restrictPositionCoord(position, imageSize, cropSize, zoom) {
-  const maxPosition = (imageSize * zoom) / 2 - cropSize / 2
+  const maxPosition = (imageSize * 10 * zoom) / 2 - cropSize / 2
   return Math.min(maxPosition, Math.max(position, -maxPosition))
 }
 
